@@ -19,7 +19,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "dev" : "nodemon ./server/server.js --exec babel-node",
+    "dev": "nodemon ./server/server.js --exec babel-node",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -49,7 +49,7 @@
     "@babel/node": "^7.14.9",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.14.9",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^8.1.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.12"
   }
