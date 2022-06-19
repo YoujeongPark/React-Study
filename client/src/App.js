@@ -1,24 +1,12 @@
-// import Nav from './Nav';
-// import About from './About';
-// import Shop from './Shop';
-// import Example from './Example';
-// import WijmoTree from './WijmoTree'
-// import './App.css';
-// import { Link } from 'react-router-dom';
-// import Main from './router/Main';
-// // import NotProducts from './router/NotProducts';
-// import ProductDetail from './router/ProductDetail.js';
-// import Products from './router/Products';
-// import ItemDetail from './itemDetail'; 
-// import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Main from './product/Main';
-// import NotProducts from './router/NotProducts';
-import ProductDetail from './product/ProductDetail';
 import Products from './product/Products';
+import ProductDetail from './product/ProductDetail';
+import Photos from './photo/Photos';
+import PhotoDetail from './photo/PhotoDetail';
+import PostComponent from './post/PostComponent';
 
 function App() {
   return (
@@ -27,11 +15,17 @@ function App() {
       <ul>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/products'>Products</Link></li>
+        <li><Link to='/photos'>Photos</Link></li>
+        <li><Link to='/posts'>Posts</Link></li>
       </ul>
       <Switch>
         <Route path={['/','/main']}exact><Main/></Route>
         <Route path='/products' exact><Products/></Route>
         <Route path='/products/:productID' exact><ProductDetail/></Route>
+        <Route path='/photos' exact><Photos/></Route>
+        <Route path='/photos/:photosID' exact><PhotoDetail/></Route>
+        <Route path='/posts' exact><PostComponent/></Route>
+        {/* <Route path='/photos/:photosID' exact><PhotoDetail/></Route> */}
         {/* <Route path='*'><NotProducts/></Route> */}
       </Switch>
     </div>
