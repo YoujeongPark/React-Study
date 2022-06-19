@@ -3,18 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {Provider} from 'react-redux';
 
-const createStoreWithMiddleware = applyMiddleware
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import reducers from './reducers';
+
+const store = createStore(reducers)
 
 ReactDOM.render(
-  <Provider
-    store = {}
-  >
-    <App />
-  </Provider>,
+  <Provider store={store}>
+        <App />
+    </Provider>,
   document.getElementById('root')
 );
+
+// Provider을 App에 넣으면 처리 ? 
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

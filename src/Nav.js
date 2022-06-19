@@ -23,6 +23,9 @@ function Nav() {
             <Link style = {navStyle} to = "/shop">
                  <li>Shop</li>
             </Link>
+            <Link style = {navStyle} to = "/wijmoTree">
+                 <li>WijmoTree</li>
+            </Link>
         </ul>
     </nav>
     );
