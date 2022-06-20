@@ -9,6 +9,8 @@ const PostComponent = () => {
     axios.get('https://jsonplaceholder.typicode.com/posts')
       .then(res => setData(res.data))
   }
+
+  
   const postClick = () => {
     axios.post('https://jsonplaceholder.typicode.com/posts', {
       userId: 11,
